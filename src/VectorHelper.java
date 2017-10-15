@@ -1,24 +1,33 @@
-
+/**
+ *Cette classe a pour but de simplifier la manipulation des tableaux 
+ * @author Kucuk/Kherbache
+ *
+ */
 public class VectorHelper {
 	int myVector[];
 	int min,max;
 	
+
 	
-	
+	/**
+	 * Ce constructeur initialise le vecteur myVector avec un vecteur en entré
+	 * @param tab : Le vecteur sur lequel on va travailler
+	 */
 	public VectorHelper(int[] tab) {
 		myVector = tab;
 	}
 
-    //Tri d'un vecteur .. 
-	
-	 public void triBulle(int Vector[])
-     {
-     boolean inversion;
-     
-     do
-         {
+    
+	/**
+	 * TriBulle : sert prinicipalement a trier le tableau
+	 * @param Vector : le tableau en question
+	 */
+	public void triBulle(int Vector[])
+    {
+    boolean inversion; 
+    do
+        {
          inversion=false;
-
          for(int i=0;i<Vector.length-1;i++)
              {
              if(Vector[i]>Vector[i+1])
@@ -27,17 +36,29 @@ public class VectorHelper {
                  inversion=true;
                  }
              }
-          }
+         }
      while(inversion);
      }
 	 
+	/**
+	 * Echanger : méthode qui échange le conteun de deux cases du tableau
+	 * @param Vector : tableau en question
+	 * @param i : indice de la premiere case
+	 * @param j : indice de la deuxieme case
+	 */
 	 public void echanger(int [] Vector, int i, int j){
 			int tabj=Vector [j];
 			Vector [j]=Vector [i];
 			Vector [i]=tabj;
 		}
 	
-	//Somme de deux vecteurs .. 
+	/**
+	 * SommeVectors : somme les élements de deux tableaux, lève une exception si les tailles des deux tabeaux sont inégales 
+	 * @param Vector1 : Premier vecteur
+	 * @param Vector2 : Deuxieme vecteur
+	 * @return 
+	 * @throws TailleDifferentesException
+	 */
 	 
 	 public int[] SommeVectors(int Vector1[],int Vector2[]) throws TailleDifferentesException{
 			
@@ -53,7 +74,9 @@ public class VectorHelper {
 			return VectorResult;
 		}
 	 
-	 //Inversion des elements d'un vecteur .. 
+	 /**
+	  * InverserTab : Inverse les éléments du tableau
+	  */
 	 
 	 void inverserTab(){
 		int x,i=0;
@@ -65,7 +88,9 @@ public class VectorHelper {
 		}
 	}
 	
-	//Le min et le max d'un vecteur simultanement .. 
+	/**
+	 * minMax : retourne le min et le max d'un tableau
+	 */
 	 
 	void minMax(){
 		int i=1;
@@ -76,17 +101,20 @@ public class VectorHelper {
 			i++;
 		}
 	}
-	
-	
-	//Appliquer une formule sur les elements d'un vecteur  .. 
-	
-	void multi2(int x){
+	/**
+	 * myformule : une formule quelconque, initialisée à multip*2
+	 * @param x : l'antécédent de la fonction
+	 */
+	void myformule(int x){
 		x=x*2;
 	}
 	
+	/**
+	 * formule : applique la méthode formule sur les cases du tableau
+	 */
 	void formule(){
 		for(int i =0; i<myVector.length ; i++){
-			multi2(myVector[i]);
+			myformule(myVector[i]);
 		}
 	}
 	
