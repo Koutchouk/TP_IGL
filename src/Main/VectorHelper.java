@@ -5,7 +5,7 @@ package Main;
  *
  */
 public class VectorHelper {
-	int myVector[];
+    int myVector[];
 	int min,max;
 	
 
@@ -106,8 +106,8 @@ public class VectorHelper {
 	 * myformule : une formule quelconque, initialisée à multip*2
 	 * @param x : l'antécédent de la fonction
 	 */
-	void myformule(int x){
-		x=x*2;
+	int myformule(int x){
+		return x*2;
 	}
 	
 	/**
@@ -115,7 +115,7 @@ public class VectorHelper {
 	 */
 	public void formule(){
 		for(int i =0; i<myVector.length ; i++){
-			myformule(myVector[i]);
+			myVector[i]=myformule(myVector[i]);
 		}
 	}
 	
