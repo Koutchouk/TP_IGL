@@ -3,6 +3,7 @@
  * @author Kucuk/Kherbache
  *
  */
+/*this was added to make changes on master Branch*/
 public class VectorHelper {
 	int myVector[];
 	int min,max;
