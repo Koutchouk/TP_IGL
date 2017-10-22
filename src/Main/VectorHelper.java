@@ -1,3 +1,4 @@
+package Main;
 /**
  *Cette classe a pour but de simplifier la manipulation des tableaux 
  * @author Kucuk/Kherbache
@@ -6,7 +7,7 @@
 /*this was added to make changes on master Branch*/
 /*this line was added to make a change in the new branch*/
 public class VectorHelper {
-	int myVector[];
+    int myVector[];
 	int min,max;
 	
 
@@ -24,17 +25,17 @@ public class VectorHelper {
 	 * TriBulle : sert prinicipalement a trier le tableau
 	 * @param Vector : le tableau en question
 	 */
-	public void triBulle(int Vector[])
+	public void triBulle()
     {
     boolean inversion; 
     do
         {
          inversion=false;
-         for(int i=0;i<Vector.length-1;i++)
+         for(int i=0;i<myVector.length-1;i++)
              {
-             if(Vector[i]>Vector[i+1])
+             if(myVector[i]>myVector[i+1])
                  {
-                 echanger(Vector,i,i+1);
+                 echanger(myVector,i,i+1);
                  inversion=true;
                  }
              }
@@ -80,7 +81,7 @@ public class VectorHelper {
 	  * InverserTab : Inverse les éléments du tableau
 	  */
 	 
-	 void inverserTab(){
+	 public void inverserTab(){
 		int x,i=0;
 		while (i< (myVector.length / 2)){
 			x= myVector[i];
@@ -94,7 +95,7 @@ public class VectorHelper {
 	 * minMax : retourne le min et le max d'un tableau
 	 */
 	 
-	void minMax(){
+	public void minMax(){
 		int i=1;
 		min = max = myVector[0];
 		while (i<myVector.length){
@@ -107,17 +108,35 @@ public class VectorHelper {
 	 * myformule : une formule quelconque, initialisée à multip*2
 	 * @param x : l'antécédent de la fonction
 	 */
-	void myformule(int x){
-		x=x*2;
+	int myformule(int x){
+		return x*2;
 	}
 	
 	/**
 	 * formule : applique la méthode formule sur les cases du tableau
 	 */
-	void formule(){
+	public void formule(){
 		for(int i =0; i<myVector.length ; i++){
-			myformule(myVector[i]);
+			myVector[i]=myformule(myVector[i]);
 		}
+	}
+	
+	
+	
+	public int[] getMyVector(){
+		return this.myVector;
+	}
+	
+	public void setMyVector(int[] newVector){
+		this.myVector=newVector;
+	}
+	
+	public int getMin(){
+		return this.min;
+	}
+	
+	public int getMax(){
+		return this.max;
 	}
 	
 	
