@@ -47,10 +47,10 @@ public class VectorHelper {
 	 * @param i : indice de la premiere case
 	 * @param j : indice de la deuxieme case
 	 */
-	 public void echanger(int [] Vector, int i, int j){
-			int tabj=Vector [j];
-			Vector [j]=Vector [i];
-			Vector [i]=tabj;
+	 public void echanger(int [] tab, int i, int j){
+			int tabj=tab [j];
+			tab [j]=tab [i];
+			tab [i]=tabj;
 		}
 	
 	/**
