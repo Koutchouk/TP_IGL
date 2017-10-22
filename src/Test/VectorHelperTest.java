@@ -10,7 +10,6 @@ public class VectorHelperTest {
 		int vector[]={123,2256,12,15,0,1,2,36,18,19999};
 		VectorHelper vh=new VectorHelper(vector);
 		int result[]={0,1,2,12,15,18,36,123,2256,19999};
-		
 		vh.triBulle();
 		assertArrayEquals(result,vh.getMyVector());
 	}
