@@ -48,10 +48,10 @@ public class VectorHelper {
 	 * @param j : indice de la deuxieme case
 	 */
 
-	 public void echanger(int [] tab, int i, int j){
-			int tabj=tab [j];
-			tab [j]=tab [i];
-			tab [i]=tabj;
+	 public void echanger(int [] Vecteur1, int i, int j){
+			int tabj=Vecteur1 [j];
+			Vecteur1 [j]=Vecteur1 [i];
+			Vecteur1 [i]=tabj;
      }
 	/**
 	 * SommeVectors : somme les élements de deux tableaux, lève une exception si les tailles des deux tabeaux sont inégales 
