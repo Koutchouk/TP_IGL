@@ -4,6 +4,8 @@ package Main;
  * @author Kucuk/Kherbache
  *
  */
+/*this was added to make changes on master Branch*/
+/*this line was added to make a change in the new branch*/
 public class VectorHelper {
     int myVector[];
 	int min,max;
