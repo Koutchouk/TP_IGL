@@ -21,6 +21,12 @@ public class VectorHelper {
     
 	/**
 	 * TriBulle : sert prinicipalement a trier le tableau
+	 * Exemple d'utilisation : 
+	 * int tab[]={8,4,2};
+	 * VectorHelper vh=new VectorHelper(tab);
+	 * vh.triBulle();
+	 * le tableau résultat sera : tab[]={2,4,8}
+	 * 
 	 * @param Vector : le tableau en question
 	 */
 	public void triBulle()
@@ -55,7 +61,11 @@ public class VectorHelper {
 
      }
 	/**
-	 * SommeVectors : somme les élements de deux tableaux, lève une exception si les tailles des deux tabeaux sont inégales 
+	 * SommeVectors : somme les élements de deux tableaux, lève une exception si les tailles des deux tabeaux sont inégales
+	 * Exemple d'utilisation: 
+	 * int vector1[]={0,1,2},vector2[]={3,4,5};
+	 * VectorHelper vh=new VectorHelper(vector1);
+	 * int result[]=vh.SommeVectors(vh.getMyVector(),vector2); le vecteur result={3,5,7}
 	 * @param Vector1 : Premier vecteur
 	 * @param Vector2 : Deuxieme vecteur
 	 * @return 
@@ -78,6 +88,10 @@ public class VectorHelper {
 	 
 	 /**
 	  * InverserTab : Inverse les éléments du tableau
+	  * Exemple d'utilisation : 
+	  * int vector1[]={0,1,2};
+	 * VectorHelper vh=new VectorHelper(vector1);
+	 * vh.inverserTab(); le vecteur : vector1={2,1,0}
 	  */
 	 
 	 public void inverserTab(){
@@ -92,6 +106,11 @@ public class VectorHelper {
 	
 	/**
 	 * minMax : retourne le min et le max d'un tableau
+	 * Exemple d'utilisation : 
+	  * int vector1[]={0,1,2};
+	 * VectorHelper vh=new VectorHelper(vector1);
+	 * vh.getMin(); le min =0
+	 * vh.getMax();le max=2
 	 */
 	 
 	public void minMax(){
@@ -113,6 +132,12 @@ public class VectorHelper {
 	
 	/**
 	 * formule : applique la méthode formule sur les cases du tableau
+	 *  Exemple d'utilisation : 
+	  * int vector1[]={0,1,2};
+	 * VectorHelper vh=new VectorHelper(vector1);
+	 * vh.formule();
+	 * int result[]=vh.getMyVector(); le vecteur result : {0,2,4}
+	 * 
 	 */
 	public void formule(){
 		for(int i =0; i<myVector.length ; i++){
